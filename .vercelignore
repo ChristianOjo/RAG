@@ -1,0 +1,9 @@
+# Ignore the data folder (already deleted, but good practice)
+data_psychology/
+
+# Ignore common names for the FAISS vector store
+faiss_index/
+vectorstore/
+
+# Ignore notebooks which can also be large
+notebooks/
