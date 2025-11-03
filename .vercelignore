@@ -1,9 +1,26 @@
-# Ignore the data folder (already deleted, but good practice)
+# Ignore all data and vector store folders
 data_psychology/
-
-# Ignore common names for the FAISS vector store
 faiss_index/
 vectorstore/
 
-# Ignore notebooks which can also be large
+# Ignore all Python-related artifacts that are not needed for the serverless function
 notebooks/
+*.ipynb
+*.pyc
+__pycache__/
+
+# Ignore common development and build artifacts
+.git/
+.venv/
+venv/
+node_modules/
+
+# Ignore all files in the root that are not directly used by Next.js or the API
+# This is the most critical part. It assumes your API is in the 'api' folder.
+# If your API is in 'src', we will need to adjust.
+download_psychology_papers.py
+download_sample_papers.py
+setup.sh
+test_pipeline.py
+
+# If you have any other large files in the root, add them here.
